@@ -12,12 +12,18 @@ for more info regarding list comprehensions.
 
 y = []
 
+for i in range(5):
+	y.append(i + 1);
+
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
 y = []
+
+for j in range(10):
+	y.append(j**3);
 
 print(y)
 
@@ -28,6 +34,9 @@ a = ["foo", "bar", "baz"]
 
 y = []
 
+for k in a:
+	y.append(k.upper());
+
 print(y)
 
 # Use a list comprehension to create a list containing only the _even_ elements
@@ -36,6 +45,6 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = []
+y = [*x]
 
 print(y)
