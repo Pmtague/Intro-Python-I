@@ -22,3 +22,36 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+today = datetime.now()
+month = today.month
+year = today.year
+
+args = sys.argv
+
+tc = calendar.TextCalendar()
+
+if len(args) == 1:
+	print(tc.prmonth(year, month))
+
+elif len(args) == 2:
+	month = int(args[1])
+	print(tc.prmonth(year, month))
+
+elif len(args) == 3:
+	month = int(args[1])
+	year = int(args[2])
+	print(tc.prmonth(year, month))
+
+else:
+	print("Input should be in this format: `14_cal.py month [year]`")
+
+# input_list = []
+
+# user_input = input("Enter the month and year as digits separated by a comma(ex: 02, 2012): ").replace(" ", "").split(",")
+
+# def new_calendar(month=default_month, year=default_year):
+# 	if len(user_input) == 0:
+# 		print(calendar.TextCalendar().formatmonth(default_year, default_month))
+	# elif len(user_input) == 1:
+	# 	print(calendar.TextCalendar().formatmonth(default_year, default_month))
