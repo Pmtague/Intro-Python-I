@@ -27,8 +27,6 @@ today = datetime.now()
 month = today.month
 year = today.year
 
-input("Enter the year and month in the following format: 2020 01:")
-
 args = sys.argv
 
 tc = calendar.TextCalendar()
